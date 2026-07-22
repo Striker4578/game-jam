@@ -202,6 +202,9 @@ offset_top = -434.0
 offset_right = -478.0
 offset_bottom = -379.5
 
+[node name="Timer" parent="Countdown" index="1" unique_id=1975134704]
+wait_time = 10.0
+
 [node name="WaterBucket" parent="." unique_id=111030821 instance=ExtResource("5_i6g32")]
 position = Vector2(32, -63)
 

@@ -63,6 +63,7 @@ shape = SubResource("CircleShape2D_o8y2f")
 position = Vector2(-6, -9)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1766988136]
+wait_time = 0.5
 
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_detection_range_body_entered"]
 [connection signal="body_exited" from="DetectionRange" to="." method="_on_detection_range_body_exited"]
