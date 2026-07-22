@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
-size = Vector2(9, 15)
+size = Vector2(9, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=584694867 groups=["player"]]
 script = ExtResource("1_cvnsp")
@@ -51,5 +51,5 @@ sprite_frames = SubResource("SpriteFrames_o8y2f")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=11523468]
-position = Vector2(0.5, -9.5)
+position = Vector2(0.5, -9)
 shape = SubResource("RectangleShape2D_o8y2f")
