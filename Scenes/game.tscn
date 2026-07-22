@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bihbmc48ebjbe"]
+
+[ext_resource type="PackedScene" uid="uid://dkg3kh4wbwdgl" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://hr8umjbor25k" path="res://Assets/Pixel icons and Game controller 2/heart.png" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://dilw3ygskk0sb" path="res://Scenes/enemy.tscn" id="3_wrm1d"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o8y2f"]
+
+[node name="Game" type="Node2D" unique_id=827806938]
+
+[node name="Player" parent="." unique_id=584694867 instance=ExtResource("1_ebmjs")]
+position = Vector2(7, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=620229755]
+position = Vector2(7, -10)
+zoom = Vector2(3.5, 3.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1857866872]
+position = Vector2(6, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=908016610]
+shape = SubResource("WorldBoundaryShape2D_o8y2f")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1939100350]
+
+[node name="Hearts" type="Panel" parent="UI" unique_id=1249628580]
+offset_left = -156.0
+offset_top = -101.0
+offset_right = -89.0
+offset_bottom = -73.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts" unique_id=1828244654]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 23.0
+alignment = 1
+
+[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=2082264320]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_qxrlw")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=626787105]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_qxrlw")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=933152631]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_qxrlw")
+expand_mode = 2
+
+[node name="Enemy" parent="UI/Hearts" unique_id=957734205 instance=ExtResource("3_wrm1d")]
+position = Vector2(197, 90)
