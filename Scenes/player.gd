@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+var has_key: bool = false
 const SPEED = 100.0
 const JUMP_VELOCITY = -325.0
 
