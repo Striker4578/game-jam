@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d1xygnfi7kwhv"]
+
+[ext_resource type="Script" uid="uid://dehg2g2ikpyxo" path="res://Scripts/turret.gd" id="1_hskch"]
+[ext_resource type="Texture2D" uid="uid://bpsrhi31svpq4" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/slime_green.png" id="2_6spbj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pulj5"]
+atlas = ExtResource("2_6spbj")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahfaj"]
+atlas = ExtResource("2_6spbj")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku01o"]
+atlas = ExtResource("2_6spbj")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_628tr"]
+atlas = ExtResource("2_6spbj")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8y2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pulj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahfaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku01o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_628tr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o8y2f"]
+radius = 288.01563
+
+[node name="Turret" type="StaticBody2D" unique_id=1552354743]
+script = ExtResource("1_hskch")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1918704585]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_o8y2f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.04012772
+flip_h = true
+
+[node name="DetectionRange" type="Area2D" parent="." unique_id=2011284364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange" unique_id=368548505]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_o8y2f")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1298585979]
+position = Vector2(-6, -9)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1766988136]
+
+[connection signal="body_entered" from="DetectionRange" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="DetectionRange" to="." method="_on_detection_range_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
