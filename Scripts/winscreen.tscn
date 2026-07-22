@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bm8s3mtr8vy0c"]
+
+[ext_resource type="Script" uid="uid://dxdjcevysay7y" path="res://Scripts/winscreen.gd" id="1_vwwum"]
+[ext_resource type="FontFile" uid="uid://emhtwxattxeu" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_njnxa"]
+
+[node name="Winscreen" type="CanvasLayer" unique_id=1364586588]
+script = ExtResource("1_vwwum")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=299394886]
+offset_left = 122.0
+offset_top = 59.0
+offset_right = 960.0
+offset_bottom = 427.0
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1293037527]
+offset_left = 255.0
+offset_top = 107.0
+offset_right = 855.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_njnxa")
+theme_override_font_sizes/font_size = 64
+text = "YOU WIN!!!!"
