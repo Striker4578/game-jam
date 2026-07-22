@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dcxovy36dvsbq"]
+
+[ext_resource type="Texture2D" uid="uid://d0xhcdbu8of44" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/Door 4.png" id="1_pbfx0"]
+[ext_resource type="Script" uid="uid://dxvo8cmsvievk" path="res://Scripts/door.gd" id="1_xqsd2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqsd2"]
+atlas = ExtResource("1_pbfx0")
+region = Rect2(0, 0, 57, 97)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d40b0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqsd2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62n1p"]
+size = Vector2(29, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d40b0"]
+size = Vector2(24, 42)
+
+[node name="Door" type="StaticBody2D" unique_id=1433767126]
+script = ExtResource("1_xqsd2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1899426825]
+position = Vector2(-15.75, -26.802631)
+scale = Vector2(0.4473684, 0.4473684)
+sprite_frames = SubResource("SpriteFrames_d40b0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1865830255]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1955641016]
+position = Vector2(-15.5, -26.5)
+shape = SubResource("RectangleShape2D_62n1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1928688350]
+position = Vector2(-16, -27)
+shape = SubResource("RectangleShape2D_d40b0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
