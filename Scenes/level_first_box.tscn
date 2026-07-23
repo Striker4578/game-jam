@@ -171,13 +171,13 @@ metadata/_edit_use_anchors_ = true
 one_shot = false
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1097175229]
-position = Vector2(-117, -29)
+position = Vector2(-139, -28)
 
 [node name="Box" parent="." unique_id=213122036 instance=ExtResource("4_ts0or")]
 position = Vector2(77, -16)
 
 [node name="Turret" parent="." unique_id=1552354743 instance=ExtResource("5_8kgum")]
-position = Vector2(82, 82)
+position = Vector2(53, 83)
 bullet_scene = ExtResource("6_8kgum")
 
 [node name="Key" parent="." unique_id=308677308 instance=ExtResource("7_k0db7")]
@@ -187,6 +187,6 @@ position = Vector2(-138, 67)
 position = Vector2(136, 83)
 
 [node name="Area2D" parent="." unique_id=424170930 instance=ExtResource("9_yro6j")]
-position = Vector2(155, 83)
+position = Vector2(160, 82)
 
 [editable path="Countdown"]
