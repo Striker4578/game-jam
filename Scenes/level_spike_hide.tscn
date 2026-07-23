@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d1xygnfi7kwhv" path="res://Scenes/turret.tscn" id="4_k8mhb"]
 [ext_resource type="PackedScene" uid="uid://dcxovy36dvsbq" path="res://Scripts/door.tscn" id="5_171wx"]
 [ext_resource type="PackedScene" uid="uid://b0ndepgr8d8tc" path="res://Scenes/bullet.tscn" id="5_fn4lb"]
+[ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="8_171wx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iy0q2"]
 texture = ExtResource("1_3i4jm")
@@ -213,5 +214,8 @@ position = Vector2(92, 87)
 
 [node name="Key" parent="." unique_id=308677308 instance=ExtResource("4_424xs")]
 position = Vector2(-15, -55)
+
+[node name="Area2D" parent="." unique_id=424170930 instance=ExtResource("8_171wx")]
+position = Vector2(159, 48)
 
 [editable path="Camera2D/Countdown"]

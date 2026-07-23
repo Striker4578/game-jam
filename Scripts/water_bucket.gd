@@ -5,7 +5,10 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("win")
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_spike_hide.tscn")
-
+	if Global.level == 0:
+		print("win")
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_spike_hide.tscn")
+		Global.level += 1
+	elif Global.level == 1:
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_base.tscn")
 	
