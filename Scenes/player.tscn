@@ -88,6 +88,7 @@ animations = [{
 size = Vector2(9, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=584694867 groups=["player"]]
+z_index = 5
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658210]

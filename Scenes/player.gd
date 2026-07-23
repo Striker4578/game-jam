@@ -3,6 +3,7 @@ extends CharacterBody2D
 var has_key: bool = false
 const SPEED = 100.0
 const JUMP_VELOCITY = -325.0
+@export var push_force: float = 5000.0
 
  # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -13,7 +14,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+		
+	if Input.is_action_just_pressed("restart"):
+		get_tree().call_deferred("reload_current_scene")
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -39,11 +43,28 @@ func _physics_process(delta: float) -> void:
 	
 	
 	
-	
+	move_and_slide()
 	#Apply movement
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if collider is RigidBody2D:
+			collider.linear_velocity.x = velocity.x
+			
+		
 
-	move_and_slide()
+
+	
+	
+	
+	
+	
+	
+	
+	
