@@ -30,5 +30,5 @@ func _on_shoot_timer_timeout() -> void:
 func shoot() -> void:
 	var bullet = bullet_scene.instantiate()
 	get_tree().current_scene.add_child(bullet)
-	bullet.global_position = global_position
+	bullet.global_position = $Muzzle.global_position
 	bullet.rotation = global_rotation

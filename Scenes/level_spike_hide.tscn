@@ -171,14 +171,14 @@ one_shot = false
 position = Vector2(-178, -92)
 
 [node name="Turret" parent="." unique_id=1552354743 instance=ExtResource("4_k8mhb")]
-position = Vector2(112, -80)
+position = Vector2(112, -78)
 bullet_scene = ExtResource("5_fn4lb")
 
 [node name="Door" parent="." unique_id=1433767126 instance=ExtResource("5_171wx")]
 position = Vector2(92, 87)
 
 [node name="Key" parent="." unique_id=308677308 instance=ExtResource("4_424xs")]
-position = Vector2(-15, -55)
+position = Vector2(-18, -50)
 
 [node name="Area2D" parent="." unique_id=424170930 instance=ExtResource("8_171wx")]
 position = Vector2(159, 48)

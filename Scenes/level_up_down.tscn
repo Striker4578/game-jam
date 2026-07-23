@@ -280,6 +280,7 @@ offset_bottom = -371.5
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" parent="Countdown" index="1" unique_id=1975134704]
+wait_time = 20.0
 one_shot = false
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1097175229]
@@ -296,7 +297,7 @@ autoplay = &"move"
 position = Vector2(-159, -80)
 
 [node name="Turret" parent="." unique_id=1552354743 instance=ExtResource("6_ypcid")]
-position = Vector2(129, 15)
+position = Vector2(129, 19)
 bullet_scene = ExtResource("7_dtth6")
 
 [node name="Key" parent="." unique_id=308677308 instance=ExtResource("8_7on2p")]
