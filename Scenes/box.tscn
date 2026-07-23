@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://clybbo235ysie"]
 
-[ext_resource type="Texture2D" uid="uid://cvdi1gf2a625u" path="res://icon.svg" id="1_xkb4e"]
+[ext_resource type="Texture2D" uid="uid://b4kcl65ww1jco" path="res://Assets/Boxyes.png" id="1_xkb4e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
-size = Vector2(30, 20)
+size = Vector2(33, 28)
 
 [node name="Box" type="RigidBody2D" unique_id=213122036]
 gravity_scale = 1.5
@@ -11,10 +11,10 @@ lock_rotation = true
 linear_damp = 10.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=639546965]
-position = Vector2(2.875, -11.875)
-scale = Vector2(0.15820313, 0.15820313)
+position = Vector2(5.000001, -13.000001)
+scale = Vector2(0.87500006, 0.87500006)
 texture = ExtResource("1_xkb4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1490022005]
-position = Vector2(3, -12)
+position = Vector2(5.5, -13)
 shape = SubResource("RectangleShape2D_o8y2f")
