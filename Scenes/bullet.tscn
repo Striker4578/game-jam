@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0ndepgr8d8tc"]
 
 [ext_resource type="Script" uid="uid://cpj5jps6a06cc" path="res://bullet.gd" id="1_oduel"]
-[ext_resource type="Texture2D" uid="uid://cqd2vkjnudwgh" path="res://Scenes/bullet gamejam.png" id="2_ycag2"]
+[ext_resource type="Texture2D" uid="uid://dqan2a4fnonkk" path="res://NEWSPRITES/newbullet.png" id="2_oduel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d40b0"]
 size = Vector2(6, 3)
@@ -13,7 +13,7 @@ script = ExtResource("1_oduel")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=904890771]
 position = Vector2(-3.3999996, -4.4999995)
 scale = Vector2(0.825, 0.90000004)
-texture = ExtResource("2_ycag2")
+texture = ExtResource("2_oduel")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284701525]

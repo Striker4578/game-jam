@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1xygnfi7kwhv"]
 
 [ext_resource type="Script" uid="uid://dehg2g2ikpyxo" path="res://Scripts/turret.gd" id="1_hskch"]
-[ext_resource type="Texture2D" uid="uid://csfmtsexdk58f" path="res://Assets/turret3.png" id="2_hskch"]
+[ext_resource type="Texture2D" uid="uid://bpeqtkfr1qqyr" path="res://NEWSPRITES/Turret2.png" id="2_hskch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6spbj"]
 atlas = ExtResource("2_hskch")
@@ -42,8 +42,7 @@ script = ExtResource("1_hskch")
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_o8y2f")
 autoplay = "default"
-frame = 1
-frame_progress = 0.17261375
+frame_progress = 0.2801245
 flip_h = true
 
 [node name="DetectionRange" type="Area2D" parent="." unique_id=2011284364]

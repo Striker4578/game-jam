@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clybbo235ysie"]
 
-[ext_resource type="Texture2D" uid="uid://b4kcl65ww1jco" path="res://Assets/Boxyes.png" id="1_xkb4e"]
+[ext_resource type="Texture2D" uid="uid://rxewx2jqtpve" path="res://NEWSPRITES/Box.png" id="1_xkb4e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
 size = Vector2(33, 28)

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dd3nill7ryyp2"]
 
 [ext_resource type="Script" uid="uid://dpvdkbg5msu2k" path="res://Scripts/water_bucket.gd" id="1_hsjo7"]
-[ext_resource type="Texture2D" uid="uid://cvdi1gf2a625u" path="res://icon.svg" id="1_u8vrv"]
+[ext_resource type="Texture2D" uid="uid://brncsuyin1bqy" path="res://NEWSPRITES/WaterBucket.png" id="2_hsjo7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hsjo7"]
-atlas = ExtResource("1_u8vrv")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nejll"]
+atlas = ExtResource("2_hsjo7")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d40b0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hsjo7")
+"texture": SubResource("AtlasTexture_nejll")
 }],
 "loop": 1,
 "name": &"default",
@@ -25,12 +25,12 @@ size = Vector2(22, 23)
 script = ExtResource("1_hsjo7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=377125461]
-position = Vector2(0.50000215, -13.25)
-scale = Vector2(0.14843747, 0.18359375)
+position = Vector2(0.5312509, -13.657073)
+scale = Vector2(0.5917968, 0.73195934)
 sprite_frames = SubResource("SpriteFrames_d40b0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597241881]
-position = Vector2(0, -13.5)
+position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_5su7o")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
