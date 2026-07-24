@@ -18,4 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_run.tscn")
 		Global.level += 1
 	elif Global.level == 4:
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_boxes.tscn")
+		Global.level += 1
+	elif Global.level == 5:
 		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_base.tscn")
