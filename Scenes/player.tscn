@@ -89,11 +89,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
 size = Vector2(9, 16)
 
+[sub_resource type="Gradient" id="Gradient_vgqql"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d40b0"]
+gradient = SubResource("Gradient_vgqql")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o8y2f"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 98, 0)
+color_ramp = SubResource("GradientTexture1D_d40b0")
+
 [node name="Player" type="CharacterBody2D" unique_id=584694867 groups=["player"]]
 z_index = 5
 collision_mask = 3
 script = ExtResource("1_cvnsp")
-push_force = 40000.0
+push_force = 500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658210]
 position = Vector2(0, -13)
@@ -114,3 +127,9 @@ texture = ExtResource("3_6t5aa")
 [node name="sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=2059305856]
 stream = ExtResource("4_vgqql")
 bus = &"SFX"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=674019611]
+position = Vector2(-1, -1)
+emitting = false
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_o8y2f")
