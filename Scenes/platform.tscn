@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://de7tadstmah4i"]
 
-[ext_resource type="Texture2D" uid="uid://b67tiq4wkwoh8" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/platforms.png" id="1_1rc8e"]
+[ext_resource type="Texture2D" uid="uid://cej4urt1i4gr1" path="res://NEWSPRITES/platforms.png" id="1_1rc8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
 size = Vector2(77, 6)

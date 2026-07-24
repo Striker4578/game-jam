@@ -22,7 +22,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	Global.player = self
 
-
+func spring_jump(force: float) -> void:
+	velocity.y = force
 
 func _physics_process(delta: float) -> void:
 	

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://5ivfyckg48e6"]
+
+[ext_resource type="Script" uid="uid://ct6p2kxgdk0hj" path="res://spring.gd" id="1_hpppm"]
+[ext_resource type="Texture2D" uid="uid://byb6aako4vqv6" path="res://NEWSPRITES/Spring.png" id="1_ka4py"]
+[ext_resource type="Texture2D" uid="uid://qt45hknohil1" path="res://NEWSPRITES/springbounce.png" id="2_boyml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvkgp"]
+size = Vector2(31, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xkb4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ka4py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_boyml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ka4py")
+}],
+"loop": 0,
+"name": &"bounce",
+"speed": 10.0
+}]
+
+[node name="Spring" type="Area2D" unique_id=624717133]
+script = ExtResource("1_hpppm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1040614945]
+z_index = 2
+position = Vector2(12.5, -7)
+shape = SubResource("RectangleShape2D_gvkgp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=839846830]
+position = Vector2(11.999998, -9.999999)
+scale = Vector2(0.56250006, 0.56250006)
+sprite_frames = SubResource("SpriteFrames_xkb4e")
+animation = &"bounce"
+frame = 2
+frame_progress = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmhe16edkrfs0" path="res://Scripts/key.tscn" id="5_ve1d5"]
 [ext_resource type="PackedScene" uid="uid://dcxovy36dvsbq" path="res://Scripts/door.tscn" id="6_w7q62"]
 [ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="7_f60yd"]
+[ext_resource type="PackedScene" uid="uid://5ivfyckg48e6" path="res://spring.tscn" id="8_w7q62"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5i6ty"]
 texture = ExtResource("1_cukix")
@@ -189,5 +190,8 @@ position = Vector2(-149, -65)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1033883300]
 color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+
+[node name="Spring" parent="." unique_id=624717133 instance=ExtResource("8_w7q62")]
+position = Vector2(76, 18)
 
 [editable path="Countdown"]
