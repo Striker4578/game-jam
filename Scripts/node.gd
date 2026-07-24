@@ -2,7 +2,7 @@ extends Node
 
 @onready var label: Label = $Label
 @onready var timer: Timer = $Timer
-
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 func _ready():
 	timer.start()
 	
@@ -28,4 +28,8 @@ func _process(delta):
 	
 	
 func _on_timer_timeout() -> void:
+	if Global.player != null:
+		Global.player.is_dead = true
+		Global.player.get_node("AnimatedSprite2D").play("death")
+		await get_tree().create_timer(1.0).timeout
 	get_tree().reload_current_scene()
