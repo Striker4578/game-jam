@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var sfx_jump: AudioStreamPlayer2D = $sfx_jump
 
 var has_key: bool = false
 const SPEED = 100.0
@@ -36,6 +37,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and coyote_timer > 0.0:
+		sfx_jump.play()
 		velocity.y = JUMP_VELOCITY
 		coyote_timer = 0.0
 

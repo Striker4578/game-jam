@@ -190,6 +190,7 @@ position = Vector2(136, 83)
 position = Vector2(160, 82)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=63624026]
+rotation = -2.3561945
 color = Color(0.8627451, 0.8627451, 0.8627451, 1)
 
 [editable path="Countdown"]

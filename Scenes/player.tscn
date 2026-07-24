@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://wvm11k3jv3qy" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dmigponop2grx" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://cb6qhxvulu716" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spotlight.png" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://cs8bx2orn115k" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/jump.mp3" id="4_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
 atlas = ExtResource("1_v0iea")
@@ -92,7 +93,7 @@ size = Vector2(9, 16)
 z_index = 5
 collision_mask = 3
 script = ExtResource("1_cvnsp")
-push_force = 6000.0
+push_force = 40000.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658210]
 position = Vector2(0, -13)
@@ -109,3 +110,7 @@ shape = SubResource("RectangleShape2D_o8y2f")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1732501875]
 position = Vector2(-1, -18)
 texture = ExtResource("3_6t5aa")
+
+[node name="sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=2059305856]
+stream = ExtResource("4_vgqql")
+bus = &"SFX"
