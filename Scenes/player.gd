@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var sfx_jump: AudioStreamPlayer2D = $sfx_jump
+@onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
 
 var has_key: bool = false
 const SPEED = 100.0
@@ -58,11 +59,17 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("jump")
+		if is_on_floor() and direction != 0:
+			gpu_particles_2d.emitting = true
+		else:
+			gpu_particles_2d.emitting = false
 	
 	if direction != 0:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
+		
+		
 	move_and_slide()
 	
 	
@@ -75,7 +82,7 @@ func _physics_process(delta: float) -> void:
 		if collider is RigidBody2D:
 			var push_dir = -collision.get_normal()
 			if abs(push_dir.x) > 0.5 and abs(push_dir.y) < 0.5:
-				collider.apply_central_impulse(Vector2(push_dir.x, 0) * push_force * delta)
+				collider.apply_central_impulse(Vector2(push_dir.x, 0) * push_force)
 			
 	
 	
