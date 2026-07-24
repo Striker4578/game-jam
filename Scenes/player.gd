@@ -10,7 +10,7 @@ const FRICTION = 1000.0
 const COYOTE_TIME: float = 0.15
 var coyote_timer: float = 0.0
 var was_on_floor: bool = false
-
+var is_dead: bool = false
 
 @export var push_force: float = 5000.0
 
@@ -19,14 +19,21 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready():
+	Global.player = self
+
 
 
 func _physics_process(delta: float) -> void:
+	
+	if is_dead:
+		return
 	# Add the gravity.
 	if is_on_floor():
 		coyote_timer = COYOTE_TIME
 	else:
 		coyote_timer -= delta
+		
 	
 	
 	
