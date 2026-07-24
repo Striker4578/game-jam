@@ -191,7 +191,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
-size = Vector2(9, 16)
+size = Vector2(9, 15)
 
 [sub_resource type="Gradient" id="Gradient_vgqql"]
 
@@ -215,13 +215,11 @@ push_force = 500.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658210]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_o8y2f")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
-frame = 13
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=11523468]
-position = Vector2(0.5, -9)
+position = Vector2(0.5, -8.5)
 shape = SubResource("RectangleShape2D_o8y2f")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1732501875]
