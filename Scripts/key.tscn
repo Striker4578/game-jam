@@ -23,6 +23,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
 size = Vector2(18, 21.5)
 
+[sub_resource type="Curve" id="Curve_o8y2f"]
+_data = [Vector2(0.105454534, 1), 0.0, 0.0, 0, 0, Vector2(0.42545456, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Key" type="Area2D" unique_id=308677308]
 script = ExtResource("1_n48ix")
 
@@ -44,5 +48,20 @@ texture = ExtResource("3_gjpop")
 [node name="sfx_key" type="AudioStreamPlayer2D" parent="." unique_id=1010138809]
 stream = ExtResource("5_clpua")
 volume_db = 1.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1239830934]
+modulate = Color(0.9137255, 0.72156864, 0.34509805, 1)
+position = Vector2(1, -13)
+emitting = false
+amount = 10
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 80.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_o8y2f")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
