@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxvo8cmsvievk" path="res://Scripts/door.gd" id="1_xqsd2"]
 [ext_resource type="Texture2D" uid="uid://cviefk2173yes" path="res://NEWSPRITES/Door.png" id="2_xqsd2"]
+[ext_resource type="AudioStream" uid="uid://boc18ejtn6ey5" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/pickupCoin (1).mp3" id="3_lh3f8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d40b0"]
 animations = [{
@@ -34,8 +35,12 @@ sprite_frames = SubResource("SpriteFrames_d40b0")
 position = Vector2(-15.5, -18.25)
 shape = SubResource("RectangleShape2D_62n1p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1928688350]
+[node name="PhysicalCollision" type="CollisionShape2D" parent="." unique_id=1928688350]
 position = Vector2(-15, -18.5)
 shape = SubResource("RectangleShape2D_d40b0")
+
+[node name="sfx_door" type="AudioStreamPlayer2D" parent="." unique_id=127363249]
+stream = ExtResource("3_lh3f8")
+volume_db = -6.24
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

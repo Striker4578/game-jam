@@ -30,6 +30,7 @@ func _process(delta):
 func _on_timer_timeout() -> void:
 	if Global.player != null:
 		Global.player.is_dead = true
+		Global.player.get_node("sfx_blow").play()
 		Global.player.get_node("AnimatedSprite2D").play("death")
 		await get_tree().create_timer(1.0).timeout
 	get_tree().reload_current_scene()
