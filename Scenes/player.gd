@@ -19,8 +19,23 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func die():
+	if is_dead:
+		return
+	is_dead = true
+	set_collision_layer_value(2, false)
+	$AnimatedSprite2D.play("death")
+	await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()
+
+
+
+
 func _ready():
 	Global.player = self
+	set_collision_layer_value(2, true)
+	is_dead = false
+	
 
 func spring_jump(force: float) -> void:
 	velocity.y = force

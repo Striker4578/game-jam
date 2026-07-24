@@ -9,7 +9,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"): 
-		call_deferred("queue_free")
-		get_tree().call_deferred("reload_current_scene")
-	elif not body.is_in_group("turret"):
-		call_deferred("queue_free")
+		if body.has_method("die") and not body.is_dead:
+			body.die()
+			Global.player.get_node("sfx_blow").play()
+			queue_free()
+		
+	queue_free()

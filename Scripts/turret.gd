@@ -2,6 +2,7 @@ extends StaticBody2D
 
 @export var bullet_scene: PackedScene
 @onready var shoot_timer: Timer = $ShootTimer
+@onready var sfx_bullet: AudioStreamPlayer2D = $sfx_bullet
 
 var target: Node2D = null
 
@@ -30,5 +31,6 @@ func _on_shoot_timer_timeout() -> void:
 func shoot() -> void:
 	var bullet = bullet_scene.instantiate()
 	get_tree().current_scene.add_child(bullet)
+	sfx_bullet.play()
 	bullet.global_position = $Muzzle.global_position
 	bullet.rotation = global_rotation

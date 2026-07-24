@@ -214,6 +214,7 @@ color_ramp = SubResource("GradientTexture1D_d40b0")
 
 [node name="Player" type="CharacterBody2D" unique_id=584694867 groups=["player"]]
 z_index = 5
+collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_cvnsp")
 push_force = 500.0

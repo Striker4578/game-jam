@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dehg2g2ikpyxo" path="res://Scripts/turret.gd" id="1_hskch"]
 [ext_resource type="Texture2D" uid="uid://bpeqtkfr1qqyr" path="res://NEWSPRITES/Turret2.png" id="2_hskch"]
+[ext_resource type="AudioStream" uid="uid://0aqi1a7l8g15" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/laserShoot.mp3" id="3_6spbj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6spbj"]
 atlas = ExtResource("2_hskch")
@@ -35,6 +36,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_o8y2f"]
 radius = 288.01563
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v0pl2"]
+random_pitch = 1.0686826
+streams_count = 1
+stream_0/stream = ExtResource("3_6spbj")
+
 [node name="Turret" type="StaticBody2D" unique_id=1552354743]
 script = ExtResource("1_hskch")
 
@@ -56,6 +62,10 @@ position = Vector2(-6, -8)
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1766988136]
 wait_time = 0.5
+
+[node name="sfx_bullet" type="AudioStreamPlayer2D" parent="." unique_id=1895336018]
+stream = SubResource("AudioStreamRandomizer_v0pl2")
+volume_db = -4.16
 
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_detection_range_body_entered"]
 [connection signal="body_exited" from="DetectionRange" to="." method="_on_detection_range_body_exited"]
