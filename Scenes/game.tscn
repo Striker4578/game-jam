@@ -208,4 +208,7 @@ wait_time = 10.0
 [node name="WaterBucket" parent="." unique_id=111030821 instance=ExtResource("5_i6g32")]
 position = Vector2(32, -63)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=681083247]
+color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+
 [editable path="Countdown"]

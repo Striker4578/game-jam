@@ -106,5 +106,5 @@ position = Vector2(0.5, -9)
 shape = SubResource("RectangleShape2D_o8y2f")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1732501875]
-position = Vector2(-5, -17)
+position = Vector2(-1, -18)
 texture = ExtResource("3_6t5aa")

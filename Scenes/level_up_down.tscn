@@ -247,4 +247,7 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=683677149]
 shape = SubResource("WorldBoundaryShape2D_o8y2f")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=341734776]
+color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+
 [editable path="Countdown"]

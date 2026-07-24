@@ -187,4 +187,7 @@ position = Vector2(-91, -56)
 [node name="Area2D" parent="." unique_id=424170930 instance=ExtResource("7_f60yd")]
 position = Vector2(-149, -65)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1033883300]
+color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+
 [editable path="Countdown"]
