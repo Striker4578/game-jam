@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpj5jps6a06cc" path="res://bullet.gd" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://dqan2a4fnonkk" path="res://NEWSPRITES/newbullet.png" id="2_oduel"]
+[ext_resource type="Texture2D" uid="uid://cb6qhxvulu716" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spotlight.png" id="3_ycag2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d40b0"]
 size = Vector2(6, 3)
@@ -19,5 +20,10 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=284701525]
 position = Vector2(-5, -4)
 shape = SubResource("RectangleShape2D_d40b0")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1539438549]
+position = Vector2(-5, -4)
+energy = 0.2
+texture = ExtResource("3_ycag2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

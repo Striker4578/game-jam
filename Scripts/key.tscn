@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://cmhe16edkrfs0"]
 
 [ext_resource type="Script" uid="uid://b2s6anw8i40y5" path="res://key.gd" id="1_n48ix"]
-[ext_resource type="Texture2D" uid="uid://bpjhnbouaekqi" path="res://Assets/key.png" id="2_n48ix"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gjpop"]
-atlas = ExtResource("2_n48ix")
-region = Rect2(0, 0, 16, 16)
+[ext_resource type="Texture2D" uid="uid://c2f8yhc3kjibl" path="res://NEWSPRITES/keyfram1.png" id="2_xcn02"]
+[ext_resource type="Texture2D" uid="uid://be8llramg5qpl" path="res://NEWSPRITES/keyfram22.png" id="3_clpua"]
+[ext_resource type="Texture2D" uid="uid://bv8cfcod2cee" path="res://Scenes/spotlight.png" id="3_gjpop"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8y2f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gjpop")
+"texture": ExtResource("2_xcn02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_clpua")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
@@ -28,9 +29,15 @@ script = ExtResource("1_n48ix")
 position = Vector2(1.9999995, -13.5855255)
 scale = Vector2(1.625, 1.625)
 sprite_frames = SubResource("SpriteFrames_o8y2f")
+autoplay = "default"
+frame_progress = 0.66366446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1185197479]
 position = Vector2(1, -11.25)
 shape = SubResource("RectangleShape2D_o8y2f")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1571313911]
+position = Vector2(1, -12)
+texture = ExtResource("3_gjpop")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
