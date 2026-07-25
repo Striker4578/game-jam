@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bg2s63vt0ir7a"]
+
+[ext_resource type="Script" uid="uid://dceehsolf6ojd" path="res://Scenes/torchdoor.gd" id="1_13wlx"]
+[ext_resource type="Texture2D" uid="uid://bwx6icwv6a6ji" path="res://NEWSPRITES/torchdoor.png" id="2_uquvg"]
+[ext_resource type="AudioStream" uid="uid://boc18ejtn6ey5" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/pickupCoin (1).mp3" id="3_nekxv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d43v6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uquvg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8y2f"]
+size = Vector2(32, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5su7o"]
+size = Vector2(36.5, 38)
+
+[node name="Torchdoor" type="StaticBody2D" unique_id=1433767126]
+script = ExtResource("1_13wlx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1899426825]
+position = Vector2(-15.476974, -19.523026)
+scale = Vector2(1.1548109, 1.1548109)
+sprite_frames = SubResource("SpriteFrames_d43v6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1865830255]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1678934733]
+position = Vector2(-16, -18.5)
+shape = SubResource("RectangleShape2D_o8y2f")
+
+[node name="PhysicalCollision" type="CollisionShape2D" parent="." unique_id=1357000095]
+position = Vector2(-15.25, -19)
+shape = SubResource("RectangleShape2D_5su7o")
+
+[node name="sfx_door" type="AudioStreamPlayer2D" parent="." unique_id=127363249]
+stream = ExtResource("3_nekxv")
+volume_db = -6.24
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

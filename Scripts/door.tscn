@@ -19,6 +19,7 @@ animations = [{
 size = Vector2(35, 37.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d40b0"]
+resource_local_to_scene = true
 size = Vector2(30, 35)
 
 [node name="Door" type="StaticBody2D" unique_id=1433767126]
