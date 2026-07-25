@@ -20,8 +20,20 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func die():
-	if is_dead:
+	
+	var camera = get_viewport().get_camera_2d()
+	if camera == null:
 		return
+	
+	var original_pos = camera.offset
+	var tween = create_tween().set_parallel(false)
+	
+	for i in range(4):
+		var random_offset = Vector2(randf_range(-15, 15), randf_range(-15, 15))
+		tween.tween_property(camera, "offset", random_offset, 0.03)
+	tween.tween_property(camera, "offset", original_pos, 0.03)
+		
+		
 	is_dead = true
 	set_collision_layer_value(2, false)
 	$AnimatedSprite2D.play("death")
