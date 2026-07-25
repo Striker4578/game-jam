@@ -27,6 +27,6 @@ func open_door() -> void:
 	sfx_door.play()
 	$AnimatedSprite2D.hide()
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
-	$Daphysical.set_deferred("deferred", true)
+	$Daphysical.set_deferred("disabled", true)
 	await sfx_door.finished
 	queue_free()
