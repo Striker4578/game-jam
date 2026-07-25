@@ -193,7 +193,7 @@ position = Vector2(91, -77)
 bullet_scene = ExtResource("5_fn4lb")
 
 [node name="Door" parent="." unique_id=1433767126 instance=ExtResource("5_171wx")]
-position = Vector2(120, 66)
+position = Vector2(120, 60)
 
 [node name="Key" parent="." unique_id=308677308 instance=ExtResource("4_424xs")]
 position = Vector2(-18, -50)
