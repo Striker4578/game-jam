@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cpbmiubj44x7e" path="res://Assets/worldset trial3.png" id="1_38dla"]
 [ext_resource type="Script" uid="uid://c4t15sthvu16h" path="res://Scripts/level_3.gd" id="2_n5e7m"]
 [ext_resource type="PackedScene" uid="uid://c8onmc8p3fxpe" path="res://Scenes/countdown.tscn" id="3_3ne40"]
+[ext_resource type="PackedScene" uid="uid://bcf6ss3l0djt8" path="res://Scenes/torch.tscn" id="4_n5e7m"]
+[ext_resource type="PackedScene" uid="uid://ifgvwc4khk2i" path="res://Scenes/torchesdoor.tscn" id="5_3ne40"]
+[ext_resource type="PackedScene" uid="uid://dcxovy36dvsbq" path="res://Scripts/door.tscn" id="5_e3kpl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5e7m"]
 texture = ExtResource("1_38dla")
@@ -191,5 +194,20 @@ position = Vector2(115, 13)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1430246128]
 color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+
+[node name="Door" parent="." unique_id=1433767126 instance=ExtResource("5_e3kpl")]
+position = Vector2(-112, 32)
+
+[node name="Torchesdoor" parent="." unique_id=2123841762 instance=ExtResource("5_3ne40")]
+position = Vector2(-70, 33)
+
+[node name="Torch" parent="." unique_id=1549234160 groups=["torches"] instance=ExtResource("4_n5e7m")]
+position = Vector2(-24, 25)
+
+[node name="Torch2" parent="." unique_id=536889780 groups=["torches"] instance=ExtResource("4_n5e7m")]
+position = Vector2(28, 24)
+
+[node name="Torch3" parent="." unique_id=246835511 groups=["torches"] instance=ExtResource("4_n5e7m")]
+position = Vector2(63, 25)
 
 [editable path="Countdown"]
