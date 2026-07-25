@@ -132,7 +132,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l6n3p")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_olqyp")
 }, {
 "duration": 0.5,
@@ -146,7 +146,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"death",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -222,8 +222,10 @@ push_force = 500.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658210]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_o8y2f")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
+frame = 13
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=11523468]
 position = Vector2(0.5, -8.5)
