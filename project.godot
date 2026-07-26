@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://d02jjvbgm3bp2"
 flowerwall_crt="*uid://cc1fomjf362h5"
+BackgroundMusic="*uid://b3m2i4qpfsfqj"
 
 [display]
 

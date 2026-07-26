@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://c8opjj4k2wbrj" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://b8tdl5ucok0nc" path="res://Assets/text-1784844072777.png" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://h8eh6mrtentj" path="res://Assets/text-1784844099067.png" id="3_n45e2"]
-[ext_resource type="Texture2D" uid="uid://cssopy6ujvb4n" path="res://Assets/text-1784844106949.png" id="4_opfnp"]
 [ext_resource type="Texture2D" uid="uid://cfs5jrdrrl2s7" path="res://NEWSPRITES/bomb.png" id="5_n45e2"]
+[ext_resource type="AudioStream" uid="uid://brn0xu43u6ce" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/Menu.mp3" id="5_opfnp"]
+[ext_resource type="FontFile" uid="uid://i04pn44lb5vm" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="6_opfnp"]
 
 [node name="MainMenu" type="Node2D" unique_id=2121882537]
 scale = Vector2(0.3, 0.3)
@@ -24,28 +25,44 @@ scale = Vector2(3.345, 3.345)
 
 [node name="Start" type="TextureButton" parent="button_manager" unique_id=1539986385]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 115.0
-offset_right = 897.0
-offset_bottom = 213.0
+offset_left = 271.05112
+offset_top = 8.968613
+offset_right = 608.551
+offset_bottom = 58.968613
 texture_normal = ExtResource("2_ce3w2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="button_manager" unique_id=1551363167]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 243.0
-offset_right = 729.66675
-offset_bottom = 341.0
+offset_left = 778.276
+offset_top = 9.965121
+offset_right = 899.61
+offset_bottom = 59.965122
 texture_normal = ExtResource("3_n45e2")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Credits" type="TextureButton" parent="button_manager" unique_id=782072128]
-layout_mode = 0
-offset_left = 324.0
-offset_top = 369.0
-offset_right = 837.0
-offset_bottom = 467.0
-texture_normal = ExtResource("4_opfnp")
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=254289802]
+stream = ExtResource("5_opfnp")
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=1177580130]
+offset_left = 1173.3333
+offset_top = 1590.0
+offset_right = 5221.333
+offset_bottom = 3290.0
+theme_override_fonts/font = ExtResource("6_opfnp")
+theme_override_font_sizes/font_size = 64
+text = "
+CREDITS:
+Game Design/Devolpment:
+Adam Mahmud,
+ Sebastian Cordova
+
+Sound Design & Music:
+Tomomomomom"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="button_manager/Credits" to="." method="_on_credits_pressed"]

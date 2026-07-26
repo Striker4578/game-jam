@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b77qes6byoop"
+path="res://.godot/imported/30 SECOND COUNTDOWN.mp3-7d878ca01878ab272eae6a37790fef8f.mp3str"
+
+[deps]
+
+source_file="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/30 SECOND COUNTDOWN.mp3"
+dest_files=["res://.godot/imported/30 SECOND COUNTDOWN.mp3-7d878ca01878ab272eae6a37790fef8f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0
+beat_count=0
+bar_beats=4

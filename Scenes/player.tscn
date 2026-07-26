@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cb6qhxvulu716" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spotlight.png" id="3_6t5aa"]
 [ext_resource type="AudioStream" uid="uid://cs8bx2orn115k" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/jump.mp3" id="4_vgqql"]
 [ext_resource type="AudioStream" uid="uid://ctmp3pivweo87" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/explosion.mp3" id="6_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://c4akcfxye2deb" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/Failure.mp3" id="7_3smsa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
 atlas = ExtResource("2_fkybt")
@@ -310,3 +311,6 @@ process_material = SubResource("ParticleProcessMaterial_o8y2f")
 [node name="sfx_blow" type="AudioStreamPlayer2D" parent="." unique_id=1745387779]
 stream = ExtResource("6_x3wgy")
 volume_db = -5.547
+
+[node name="Failure" type="AudioStreamPlayer2D" parent="." unique_id=167283944]
+stream = ExtResource("7_3smsa")

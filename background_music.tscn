@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b3m2i4qpfsfqj"]
+
+[ext_resource type="AudioStream" uid="uid://dmj63dvhaciqt" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/30 SECOND COUNTDOWN.mp3" id="1_4m5bw"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" unique_id=516503666]
+stream = ExtResource("1_4m5bw")
+volume_db = 1.0

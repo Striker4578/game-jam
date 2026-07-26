@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8onmc8p3fxpe" path="res://Scenes/countdown.tscn" id="3_n17n2"]
 [ext_resource type="PackedScene" uid="uid://clybbo235ysie" path="res://Scenes/box.tscn" id="4_pn8y0"]
 [ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="5_an5gn"]
+[ext_resource type="FontFile" uid="uid://i04pn44lb5vm" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="6_ch6n6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5e7m"]
 texture = ExtResource("1_snang")
@@ -200,5 +201,17 @@ position = Vector2(93, 77)
 
 [node name="Area2D" parent="." unique_id=424170930 instance=ExtResource("5_an5gn")]
 position = Vector2(96, 0)
+
+[node name="Label" type="Label" parent="." unique_id=251142368]
+offset_left = -140.0
+offset_top = -54.0
+offset_right = 142.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.81960785, 0.40392157, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("6_ch6n6")
+theme_override_font_sizes/font_size = 8
+text = "Press \"R\" to 
+Restart the level!!!"
+horizontal_alignment = 1
 
 [editable path="Countdown"]

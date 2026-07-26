@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpvdkbg5msu2k" path="res://Scripts/water_bucket.gd" id="1_hsjo7"]
 [ext_resource type="Texture2D" uid="uid://brncsuyin1bqy" path="res://NEWSPRITES/WaterBucket.png" id="2_hsjo7"]
 [ext_resource type="Texture2D" uid="uid://cb6qhxvulu716" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spotlight.png" id="3_nejll"]
+[ext_resource type="AudioStream" uid="uid://df8gft8iyvfcx" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/Success.mp3" id="4_0jxt0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nejll"]
 atlas = ExtResource("2_hsjo7")
@@ -37,5 +38,9 @@ shape = SubResource("RectangleShape2D_5su7o")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=307226501]
 position = Vector2(0, -22)
 texture = ExtResource("3_nejll")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=183462263]
+stream = ExtResource("4_0jxt0")
+volume_db = 1.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

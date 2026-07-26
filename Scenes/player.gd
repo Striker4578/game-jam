@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var sfx_jump: AudioStreamPlayer2D = $sfx_jump
 @onready var gpu_particles_2d: GPUParticles2D = $GPUParticles2D
+@onready var failure: AudioStreamPlayer2D = $Failure
 
 var has_key: bool = false
 const SPEED = 100.0
@@ -38,13 +39,21 @@ func die():
 	tween.tween_property(camera, "offset", original_pos, 0.03)
 		
 		
+		
 	is_dead = true
 	set_collision_layer_value(2, false)
 	$AnimatedSprite2D.play("death")
+	$Failure.play()
+	# --- ADD LOSE JINGLE PROTOCOL HERE ---
+	BackgroundMusic.stop() # Stops the regular countdown ticking noise
+	# If you have a specific audio player for a death/lose sound, play it here!
+	# Example: $sfx_lose.play() 
+	
 	await get_tree().create_timer(1.0).timeout
+	
+	# Restart the music at 15.0 seconds right when the scene reloads
+	BackgroundMusic.play(15.0) 
 	get_tree().reload_current_scene()
-
-
 
 
 func _ready():
@@ -73,6 +82,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 		
 	if Input.is_action_just_pressed("restart"):
+		BackgroundMusic.play(15.0)
 		get_tree().call_deferred("reload_current_scene")
 	
 	# Handle jump.

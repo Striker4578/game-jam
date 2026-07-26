@@ -3,6 +3,7 @@ extends Area2D
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var timer: Timer = $"%Timer"
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 const LEVELS = [
 	"res://Scenes/level_boxstart.tscn",
@@ -21,7 +22,8 @@ const LEVELS = [
 	"res://Scenes/level_ringaround.tscn",
 	"res://Scenes/level_NOTbase.tscn",
 	"res://Scenes/level_hugobig.tscn",
-	"res://Scenes/level_best.tscn"
+	"res://Scenes/level_best.tscn",
+	"res://Scenes/level_end.tscn"
 	
 	
 	
@@ -35,10 +37,11 @@ func _on_body_entered(body: Node2D) -> void:
 		if "has_won" in body:
 			body.has_won = true
 			body.velocity = Vector2.ZERO
+		BackgroundMusic.stop()
 		body.animated_sprite_2d.play("happy")
-		
+		$AudioStreamPlayer2D.play()
 		await body.animated_sprite_2d.animation_finished
 		if Global.level < LEVELS.size():
 			var next_level_path = LEVELS[Global.level]
 			Global.level += 1
-			get_tree().call_deferred("change_scene_to_file", next_level_path)
+			Global.goto_next_level(next_level_path)

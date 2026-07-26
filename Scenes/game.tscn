@@ -169,9 +169,6 @@ offset_top = -396.0
 offset_right = -504.0
 offset_bottom = -341.5
 
-[node name="Timer" parent="Countdown" index="1" unique_id=1975134704]
-wait_time = 10.0
-
 [node name="WaterBucket" parent="." unique_id=111030821 instance=ExtResource("5_i6g32")]
 position = Vector2(-66, 33)
 
@@ -186,8 +183,8 @@ offset_bottom = -4.0
 theme_override_colors/font_color = Color(0.81960785, 0.40392157, 0.38431373, 1)
 theme_override_fonts/font = ExtResource("6_1l0tm")
 theme_override_font_sizes/font_size = 8
-text = "Hurry!!! Get to the water 
-before you blow up!!!"
+text = "Hurry!!! You're about to explode! 
+Get to the water bucket to clear your fuse!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

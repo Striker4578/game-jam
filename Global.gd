@@ -4,3 +4,7 @@ extends Node
 var level: int = 0
 
 var player: CharacterBody2D = null
+
+func goto_next_level(next_level_path: String) -> void:
+	get_tree().change_scene_to_file(next_level_path)
+	BackgroundMusic.play(15) 

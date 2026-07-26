@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djqaax504g55n"
+path="res://.godot/imported/GMTK2026 8bit Countdown v2 -- Success.mp3-852bac0bb2fb513a12fd0efdb2a51832.mp3str"
+
+[deps]
+
+source_file="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/GMTK2026 8bit Countdown v2 -- Success.mp3"
+dest_files=["res://.godot/imported/GMTK2026 8bit Countdown v2 -- Success.mp3-852bac0bb2fb513a12fd0efdb2a51832.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
