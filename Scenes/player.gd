@@ -11,6 +11,7 @@ const COYOTE_TIME: float = 0.15
 var coyote_timer: float = 0.0
 var was_on_floor: bool = false
 var is_dead: bool = false
+var has_won: bool = false
 
 @export var push_force: float = 5000.0
 
@@ -20,6 +21,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func die():
+	
+	if has_won:
+		return
 	
 	var camera = get_viewport().get_camera_2d()
 	if camera == null:
@@ -54,7 +58,7 @@ func spring_jump(force: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if is_dead:
+	if is_dead or has_won:
 		return
 	# Add the gravity.
 	if is_on_floor():

@@ -34,7 +34,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o8y2f"]
-radius = 288.01563
+radius = 464.0097
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v0pl2"]
 random_pitch = 1.0686826

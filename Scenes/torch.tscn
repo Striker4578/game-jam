@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dm2qarh4b33k3" path="res://NEWSPRITES/torch5.png" id="5_n1y4a"]
 [ext_resource type="Texture2D" uid="uid://voqbnak7txk5" path="res://NEWSPRITES/torch0.png" id="6_mjdc7"]
 [ext_resource type="Texture2D" uid="uid://cb6qhxvulu716" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spotlight.png" id="8_d43v6"]
+[ext_resource type="AudioStream" uid="uid://dx64iqvk51f1i" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/fire.mp3" id="8_e64sw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8y2f"]
 animations = [{
@@ -59,5 +60,10 @@ shape = SubResource("RectangleShape2D_o8y2f")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1748044092]
 position = Vector2(-1, -10)
 texture = ExtResource("8_d43v6")
+
+[node name="sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=1050090736]
+stream = ExtResource("8_e64sw")
+volume_db = -7.627
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

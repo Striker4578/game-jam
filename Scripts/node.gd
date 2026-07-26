@@ -29,6 +29,8 @@ func _process(delta):
 	
 func _on_timer_timeout() -> void:
 	if Global.player != null:
+		if Global.player.has_won:
+			return
 		
 		var sfx = Global.player.get_node_or_null("sfx_blow")
 		if sfx: sfx.play()

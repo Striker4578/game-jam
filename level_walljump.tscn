@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://bcg7fh6x6ibp5"]
 
-[ext_resource type="PackedScene" uid="uid://cmrse5113mwtv" path="res://Scenes/level_walljump.tscn" id="1_n8gki"]
 [ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="2_nxn2r"]
 
-[node name="level_walljump" unique_id=172890722 instance=ExtResource("1_n8gki")]
+[node name="level_walljump" type="Node2D"]
 
-[node name="Area2D" parent="." index="10" unique_id=424170930 instance=ExtResource("2_nxn2r")]
+[node name="Area2D" parent="." index="10" instance=ExtResource("2_nxn2r")]
 position = Vector2(79, 48)
-
-[editable path="Countdown"]
