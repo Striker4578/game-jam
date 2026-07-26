@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ct6p2kxgdk0hj" path="res://spring.gd" id="1_hpppm"]
 [ext_resource type="Texture2D" uid="uid://byb6aako4vqv6" path="res://NEWSPRITES/Spring.png" id="1_ka4py"]
 [ext_resource type="Texture2D" uid="uid://qt45hknohil1" path="res://NEWSPRITES/springbounce.png" id="2_boyml"]
+[ext_resource type="AudioStream" uid="uid://dnncwf0qcsgvn" path="res://Assets/brackeys_platformer_assets/brackeys_platformer_assets/music/spring.mp3" id="4_gvkgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvkgp"]
 size = Vector2(31, 12)
@@ -24,6 +25,11 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xjfja"]
+random_pitch = 1.0686826
+streams_count = 1
+stream_0/stream = ExtResource("4_gvkgp")
+
 [node name="Spring" type="Area2D" unique_id=624717133]
 script = ExtResource("1_hpppm")
 
@@ -39,5 +45,9 @@ sprite_frames = SubResource("SpriteFrames_xkb4e")
 animation = &"bounce"
 frame = 2
 frame_progress = 1.0
+
+[node name="sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=1121866498]
+stream = SubResource("AudioStreamRandomizer_xjfja")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
