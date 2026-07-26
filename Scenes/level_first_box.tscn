@@ -161,10 +161,10 @@ zoom = Vector2(3, 3)
 [node name="Countdown" parent="." unique_id=1587594562 instance=ExtResource("3_ts0or")]
 
 [node name="Label" parent="Countdown" index="0" unique_id=601767082]
-offset_left = -602.0
-offset_top = -411.0
-offset_right = -433.0
-offset_bottom = -356.5
+offset_left = -474.0
+offset_top = -413.0
+offset_right = -305.0
+offset_bottom = -358.5
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" parent="Countdown" index="1" unique_id=1975134704]
@@ -174,7 +174,7 @@ one_shot = false
 position = Vector2(-139, -28)
 
 [node name="Box" parent="." unique_id=213122036 instance=ExtResource("4_ts0or")]
-position = Vector2(76, -34)
+position = Vector2(76, -19)
 
 [node name="Turret" parent="." unique_id=1552354743 instance=ExtResource("5_8kgum")]
 position = Vector2(75, 84)
