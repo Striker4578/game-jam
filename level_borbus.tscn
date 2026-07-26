@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cnprw444y2at0"]
+
+[ext_resource type="PackedScene" uid="uid://cmrse5113mwtv" path="res://Scenes/level_walljump.tscn" id="1_3oydc"]
+[ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="2_0oyrd"]
+
+[node name="level_walljump" unique_id=172890722 instance=ExtResource("1_3oydc")]
+
+[node name="Area2D" parent="." index="10" unique_id=424170930 instance=ExtResource("2_0oyrd")]
+position = Vector2(79, 48)
+
+[editable path="Countdown"]
