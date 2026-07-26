@@ -1,11 +1,10 @@
-[gd_scene format=3 uid="uid://k7g2jmhf2mdy"]
+[gd_scene format=3 uid="uid://gkkkk3agkvsr"]
 
-[ext_resource type="Texture2D" uid="uid://cpbmiubj44x7e" path="res://Assets/worldset trial3.png" id="1_38dla"]
-[ext_resource type="Script" uid="uid://c4t15sthvu16h" path="res://Scripts/level_3.gd" id="2_n5e7m"]
-[ext_resource type="PackedScene" uid="uid://c8onmc8p3fxpe" path="res://Scenes/countdown.tscn" id="3_3ne40"]
+[ext_resource type="PackedScene" uid="uid://bxq4m754blr5v" path="res://level_walljump_again.tscn" id="1_i1mpb"]
+[ext_resource type="Texture2D" uid="uid://cpbmiubj44x7e" path="res://Assets/worldset trial3.png" id="2_u460k"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5e7m"]
-texture = ExtResource("1_38dla")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bw1ob"]
+texture = ExtResource("2_u460k")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -159,37 +158,11 @@ texture = ExtResource("1_38dla")
 2:15/0 = 0
 3:15/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_ycag2"]
+[sub_resource type="TileSet" id="TileSet_jc326"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_n5e7m")
+sources/0 = SubResource("TileSetAtlasSource_bw1ob")
 
-[node name="level_base" type="TileMap" unique_id=172890722]
-position = Vector2(30, 38)
-tile_set = SubResource("TileSet_ycag2")
-format = 2
-layer_0/name = "Back"
-layer_1/name = "Mid"
-script = ExtResource("2_n5e7m")
+[node name="Asdasda" type="Node2D" unique_id=1480637771]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=128072847]
-zoom = Vector2(3, 3)
-
-[node name="Countdown" parent="." unique_id=1587594562 instance=ExtResource("3_3ne40")]
-
-[node name="Label" parent="Countdown" index="0" unique_id=601767082]
-offset_left = -444.0
-offset_top = -377.0
-offset_right = -275.0
-offset_bottom = -322.5
-metadata/_edit_use_anchors_ = true
-
-[node name="Timer" parent="Countdown" index="1" unique_id=1975134704]
-one_shot = false
-
-[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1097175229]
-position = Vector2(-199, -120)
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1430246128]
-color = Color(0.8627451, 0.8627451, 0.8627451, 1)
-
-[editable path="Countdown"]
+[node name="level_walljump" parent="." unique_id=172890722 instance=ExtResource("1_i1mpb")]
+tile_set = SubResource("TileSet_jc326")
