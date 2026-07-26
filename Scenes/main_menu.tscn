@@ -4,15 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://b8tdl5ucok0nc" path="res://Assets/text-1784844072777.png" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://h8eh6mrtentj" path="res://Assets/text-1784844099067.png" id="3_n45e2"]
 [ext_resource type="Texture2D" uid="uid://cssopy6ujvb4n" path="res://Assets/text-1784844106949.png" id="4_opfnp"]
+[ext_resource type="Texture2D" uid="uid://cfs5jrdrrl2s7" path="res://NEWSPRITES/bomb.png" id="5_n45e2"]
 
 [node name="MainMenu" type="Node2D" unique_id=2121882537]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_28flt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1578866830]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_n45e2")
 
 [node name="button_manager" type="Control" parent="." unique_id=21359858]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(3.345, 3.345)
 
 [node name="Start" type="TextureButton" parent="button_manager" unique_id=1539986385]
 layout_mode = 0
