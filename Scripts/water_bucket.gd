@@ -19,6 +19,7 @@ const LEVELS = [
 	"res://Scenes/level_whatcomesaround.tscn",
 	"res://Scenes/level_left_to_right.tscn",
 	"res://Scenes/level_ringaround.tscn",
+	"res://Scenes/level_NOTbase.tscn",
 	"res://Scenes/level_hugobig.tscn",
 	"res://Scenes/level_best.tscn"
 	
