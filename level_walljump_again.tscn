@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxq4m754blr5v"]
 
-[ext_resource type="PackedScene" uid="uid://cmrse5113mwtv" path="res://Scenes/level_walljump.tscn" id="1_nkv83"]
+[ext_resource type="PackedScene" uid="uid://bcg7fh6x6ibp5" path="res://level_walljump.tscn" id="1_nkv83"]
 [ext_resource type="PackedScene" uid="uid://dd3nill7ryyp2" path="res://Scenes/water_bucket.tscn" id="2_xfmc5"]
 
 [node name="level_walljump" unique_id=172890722 instance=ExtResource("1_nkv83")]
